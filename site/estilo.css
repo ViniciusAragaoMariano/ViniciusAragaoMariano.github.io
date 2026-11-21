@@ -1,0 +1,41 @@
+:root{--tinta:#10202b;--papel:#f3f7fb;--link:#0a4d8c;--faixa:#ffd23f;--borda:#9fb3c4;--suave:#e1eaf2}
+body.contraste{--tinta:#fff;--papel:#000;--link:#ffd23f;--faixa:#ffd23f;--borda:#fff;--suave:#1a1a1a}
+*{box-sizing:border-box}
+html{font-size:112.5%}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:"Atkinson Hyperlegible",Verdana,Arial,sans-serif;line-height:1.65}
+a{color:var(--link);text-underline-offset:.18em}
+a:hover{text-decoration-thickness:.2em}
+:focus-visible{outline:3px solid var(--tinta);outline-offset:3px;box-shadow:0 0 0 6px var(--faixa)}
+.pular{position:absolute;left:1rem;top:-4rem;background:var(--faixa);color:#000;padding:.6rem 1rem;font-weight:700;z-index:10}
+.pular:focus{top:1rem}
+header{border-bottom:6px solid var(--faixa);background:var(--suave)}
+.topo{max-width:64rem;margin:auto;padding:1rem;display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between;align-items:center}
+.marca{font-size:1.3rem;font-weight:700;color:var(--tinta);text-decoration:none}
+.ferramentas{display:flex;gap:.5rem}
+button{font:inherit;min-height:44px;min-width:44px;padding:.3rem .9rem;border:2px solid var(--tinta);background:var(--papel);color:var(--tinta);border-radius:.4rem;cursor:pointer}
+button[aria-pressed="true"]{background:var(--tinta);color:var(--papel)}
+nav ul{list-style:none;margin:0;padding:0 1rem 1rem;max-width:64rem;margin-inline:auto;display:flex;flex-wrap:wrap;gap:.4rem}
+nav a{display:inline-block;padding:.6rem .9rem;min-height:44px;border:2px solid transparent;border-radius:.4rem;color:var(--tinta);font-weight:700}
+nav a[aria-current="page"]{border-color:var(--tinta);background:var(--faixa);color:#000;text-decoration:none}
+main{max-width:44rem;margin:0 auto;padding:2.5rem 1rem 3rem}
+h1{font-size:2.3rem;line-height:1.15;margin:0 0 1rem}
+h2{font-size:1.5rem;margin:2.2rem 0 .5rem;line-height:1.25}
+.intro{font-size:1.2rem}
+main ul,main ol{padding-left:1.3rem}
+li{margin:.4rem 0}
+.lista-artigos{list-style:none;padding:0}
+.lista-artigos li{border-left:6px solid var(--faixa);padding-left:1rem;margin:1.2rem 0}
+.lista-artigos a{font-size:1.2rem;font-weight:700}
+table{border-collapse:collapse;width:100%;margin:1rem 0}
+caption{text-align:left;font-weight:700;padding-bottom:.5rem}
+th,td{border:1px solid var(--borda);padding:.6rem;text-align:left;vertical-align:top}
+th{background:var(--suave)}
+.proximo{margin-top:3rem;padding-top:1rem;border-top:2px solid var(--borda);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+footer{border-top:6px solid var(--faixa);background:var(--suave);padding:1.2rem 1rem;text-align:center}
+@media (prefers-reduced-motion:no-preference){a,button{transition:background-color .15s}}
+@media (max-width:30rem){h1{font-size:1.8rem}}
+.ferramentas{flex-wrap:wrap;align-items:center}
+.ferramentas label{font-weight:700}
+select{font:inherit;min-height:44px;padding:.3rem .5rem;border:2px solid var(--tinta);background:var(--papel);color:var(--tinta);border-radius:.4rem}
+button:disabled{opacity:.55;cursor:not-allowed}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
