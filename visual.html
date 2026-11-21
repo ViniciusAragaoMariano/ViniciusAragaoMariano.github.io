@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ver sem enxergar: leitores de tela e contraste | Acessível no Dia a Dia</title>
+<meta name="description" content="Como leitores de tela, texto alternativo e contraste ajudam pessoas cegas e com baixa visão.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header>
+<div class="topo">
+<a class="marca" href="index.html">Acessível no Dia a Dia</a>
+<div class="ferramentas" role="group" aria-label="Ferramentas de acessibilidade">
+<button type="button" id="btn-menos" aria-label="Diminuir texto">A-</button>
+<button type="button" id="btn-mais" aria-label="Aumentar texto">A+</button>
+<button type="button" id="btn-contraste" aria-pressed="false">Alto contraste</button>
+</div>
+<div class="ferramentas" id="leitura" role="group" aria-label="Leitura em voz alta">
+<button type="button" id="btn-ouvir">Ouvir página</button>
+<button type="button" id="btn-pausa" aria-pressed="false" disabled>Pausar</button>
+<button type="button" id="btn-parar" disabled>Parar</button>
+<label for="vel-leitura">Velocidade</label>
+<select id="vel-leitura"><option value="0.8">Lenta</option><option value="1" selected>Normal</option><option value="1.3">Rápida</option></select>
+<span id="estado-leitura" class="sr" role="status" aria-live="polite"></span>
+</div>
+</div>
+<nav aria-label="Principal"><ul><li><a href="index.html">Início</a></li><li><a href="visual.html" aria-current="page">Visão</a></li><li><a href="auditiva.html">Audição</a></li><li><a href="motora.html">Mobilidade</a></li><li><a href="cognitiva.html">Cognição</a></li><li><a href="recursos.html">Recursos</a></li></ul></nav>
+</header>
+<main id="conteudo" tabindex="-1">
+
+<h1>Ver sem enxergar: leitores de tela e contraste</h1>
+<p class="intro">Milhões de brasileiros têm algum grau de deficiência visual, o que inclui cegueira, baixa visão e daltonismo. Cada grupo enfrenta barreiras diferentes.</p>
+<h2>Leitores de tela</h2>
+<p>Leitores de tela, como NVDA, VoiceOver e TalkBack, transformam o conteúdo em voz ou em braille. Eles dependem de código bem escrito: títulos em ordem, listas de verdade, botões e links com nomes que façam sentido fora de contexto. Um link "clique aqui" não diz nada; "baixar o relatório de 2026" diz.</p>
+<h2>Imagens precisam de descrição</h2>
+<p>O texto alternativo (atributo <code>alt</code>) descreve a função da imagem. Em uma foto de notícia, descreva o que ela mostra. Em um ícone decorativo, deixe o <code>alt</code> vazio para que o leitor o ignore.</p>
+<h2>Contraste e cor</h2>
+<p>Pessoas com baixa visão e daltonismo precisam de contraste alto entre texto e fundo. Nunca use só a cor para transmitir uma informação: um campo com erro deve ter também ícone ou mensagem escrita.</p>
+<h2>No cotidiano</h2>
+<ul>
+<li>Permita ampliar o texto até 200% sem perder conteúdo.</li>
+<li>Rotule botões de caixas eletrônicos e elevadores em braille e com voz.</li>
+<li>Descreva gráficos em texto, além da imagem.</li>
+</ul>
+<p>Use os botões no topo desta página para testar o aumento de fonte e o alto contraste.</p>
+<nav class="proximo" aria-label="Artigos"><a href="index.html">Anterior: Início</a><a href="auditiva.html">Próximo: Audição</a></nav>
+</main>
+<footer><p>Site educativo sobre acessibilidade. Feito com HTML, CSS e JavaScript, seguindo a WCAG 2.2.</p></footer>
+<script src="acessibilidade.js"></script>
+<script src="leitura.js"></script>
+</body>
+</html>

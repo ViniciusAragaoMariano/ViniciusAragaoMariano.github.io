@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leis, normas e ferramentas | Acessível no Dia a Dia</title>
+<meta name="description" content="WCAG, Lei Brasileira de Inclusão e ferramentas gratuitas para testar a acessibilidade de um site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header>
+<div class="topo">
+<a class="marca" href="index.html">Acessível no Dia a Dia</a>
+<div class="ferramentas" role="group" aria-label="Ferramentas de acessibilidade">
+<button type="button" id="btn-menos" aria-label="Diminuir texto">A-</button>
+<button type="button" id="btn-mais" aria-label="Aumentar texto">A+</button>
+<button type="button" id="btn-contraste" aria-pressed="false">Alto contraste</button>
+</div>
+<div class="ferramentas" id="leitura" role="group" aria-label="Leitura em voz alta">
+<button type="button" id="btn-ouvir">Ouvir página</button>
+<button type="button" id="btn-pausa" aria-pressed="false" disabled>Pausar</button>
+<button type="button" id="btn-parar" disabled>Parar</button>
+<label for="vel-leitura">Velocidade</label>
+<select id="vel-leitura"><option value="0.8">Lenta</option><option value="1" selected>Normal</option><option value="1.3">Rápida</option></select>
+<span id="estado-leitura" class="sr" role="status" aria-live="polite"></span>
+</div>
+</div>
+<nav aria-label="Principal"><ul><li><a href="index.html">Início</a></li><li><a href="visual.html">Visão</a></li><li><a href="auditiva.html">Audição</a></li><li><a href="motora.html">Mobilidade</a></li><li><a href="cognitiva.html">Cognição</a></li><li><a href="recursos.html" aria-current="page">Recursos</a></li></ul></nav>
+</header>
+<main id="conteudo" tabindex="-1">
+
+<h1>Leis, normas e ferramentas</h1>
+<p class="intro">Existem normas claras para criar sites acessíveis e ferramentas gratuitas para verificar se estão sendo seguidas.</p>
+<h2>Os quatro princípios da WCAG</h2>
+<p>As Diretrizes de Acessibilidade para Conteúdo Web (WCAG), do W3C, organizam-se em quatro princípios.</p>
+<table>
+<caption>Princípios da WCAG</caption>
+<thead><tr><th scope="col">Princípio</th><th scope="col">Significa</th><th scope="col">Exemplo</th></tr></thead>
+<tbody>
+<tr><th scope="row">Perceptível</th><td>A informação pode ser percebida por mais de um sentido.</td><td>Texto alternativo em imagens.</td></tr>
+<tr><th scope="row">Operável</th><td>Tudo funciona por diferentes meios de entrada.</td><td>Navegação completa por teclado.</td></tr>
+<tr><th scope="row">Compreensível</th><td>Conteúdo e interface são claros e previsíveis.</td><td>Mensagens de erro específicas.</td></tr>
+<tr><th scope="row">Robusto</th><td>Funciona com tecnologias assistivas atuais e futuras.</td><td>HTML semântico válido.</td></tr>
+</tbody></table>
+<table>
+<caption>Contraste mínimo entre texto e fundo (WCAG, nível AA)</caption>
+<thead><tr><th scope="col">Tipo de texto</th><th scope="col">Razão mínima</th></tr></thead>
+<tbody><tr><th scope="row">Texto normal</th><td>4,5 para 1</td></tr><tr><th scope="row">Texto grande (a partir de 24 px)</th><td>3 para 1</td></tr></tbody></table>
+<h2>Leis no Brasil</h2>
+<p>A <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13146.htm">Lei Brasileira de Inclusão (Lei 13.146/2015)</a> exige acessibilidade em sites de empresas e órgãos públicos. O governo federal também mantém o modelo eMAG para sites públicos.</p>
+<h2>Ferramentas gratuitas</h2>
+<ul>
+<li><a href="https://wave.webaim.org/">WAVE</a>: aponta erros de acessibilidade na página.</li>
+<li><a href="https://www.nvaccess.org/">NVDA</a>: leitor de tela gratuito para Windows.</li>
+<li><a href="https://www.w3.org/WAI/">W3C WAI</a>: guias oficiais de acessibilidade web.</li>
+</ul>
+<nav class="proximo" aria-label="Artigos"><a href="cognitiva.html">Anterior: Cognição</a><span></span></nav>
+</main>
+<footer><p>Site educativo sobre acessibilidade. Feito com HTML, CSS e JavaScript, seguindo a WCAG 2.2.</p></footer>
+<script src="acessibilidade.js"></script>
+<script src="leitura.js"></script>
+</body>
+</html>
